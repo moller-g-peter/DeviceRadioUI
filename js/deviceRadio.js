@@ -14,10 +14,25 @@ $(tab).on('click', function(){
 });
 
 
+function swipeFunction(index) {
+  $('.carousel').carousel(index);
+}
 
 
+$('#carousel-example-generic').on('slid.bs.carousel', function() {
+  
+  var savedIndex = $(this).find('.active').index();
+  // $('li').attr().find("[data-index='" + savedIndex + "']");
+
+  if ($('.mobileNavbar > li').attr('data-index') == savedIndex) {
+    console.log("hellooooo");
+  } else{
+    console.log("nooo!");
+  }
 
 
+  // console.log(savedIndex);
+});
 
 
 

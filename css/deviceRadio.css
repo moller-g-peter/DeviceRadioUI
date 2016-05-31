@@ -47,14 +47,9 @@ and (max-device-width : 640px){
   #mobileWrapper{
     display: block;
   }
-  ul > li{
-    text-align: center;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
   .yellow{
-  background-color: orange;
-  height: 100%;
+    background-color: orange;
+    height: 100%;
   }
   .red{
     background-color: red;
@@ -63,6 +58,12 @@ and (max-device-width : 640px){
 
 
 /* ----- MENU TABS ----- */
+
+  ul > li{
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .nav-pills > li > a{
     border-radius: 0 !important;
     color: #fff !important;
