@@ -69,14 +69,12 @@ and (max-device-width : 640px){
     color: #fff !important;
   }
   .nav>li>a:link{
-    background-color: #475F6D !important;
+    background-color: #475F6D;
   }
-  .nav>li>a:hover{
+ /* .nav>li>a:hover{
     background-color: #1c313e !important;
-  }
-  .nav-pills>li.active>a, 
-  .nav-pills>li.active>a:focus, 
-  .nav-pills>li.active>a:hover{
+  }*/
+  .nav-pills>li.active>a{
     background-color: #1c313e !important;
   }
 

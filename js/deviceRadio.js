@@ -6,7 +6,7 @@ $("#carousel-example-generic").carousel(function(){});
 // makes clicked tab active
 var tab = '.mobileNavbar li';
 var tabLink = '.mobileNavbar>li>a';
-$('.stream').addClass('active');
+$('.tab1').addClass('active');
 
 $(tab).on('click', function(){
   $(tab).removeClass('active');
@@ -14,24 +14,40 @@ $(tab).on('click', function(){
 });
 
 
+// <li onclick="swipeFunction(1)"...any number in paranthesis is "index"
 function swipeFunction(index) {
   $('.carousel').carousel(index);
 }
 
-
 $('#carousel-example-generic').on('slid.bs.carousel', function() {
   
-  var savedIndex = $(this).find('.active').index();
-  // $('li').attr().find("[data-index='" + savedIndex + "']");
-
-  if ($('.mobileNavbar > li').attr('data-index') == savedIndex) {
-    console.log("hellooooo");
-  } else{
-    console.log("nooo!");
-  }
+  var activeIndex = $(this).find('.active').index();
 
 
-  // console.log(savedIndex);
+  // $('.nav-pills>li:e(' + activeIndex + ')>a');
+
+$('.mobileNavbar .active').removeClass('.active');
+$('.mobileNavbar #tab' + activeIndex).addClass('.active');
+
+  // $('li').attr().find("[data-index='" + activeIndex + "']");
+
+  // console.log($(this).find('.active').index());
+
+  // if ($('.mobileNavbar > li').attr('data-index') == activeIndex) {
+  //   console.log('hell');
+  // } else {
+  //   console.log($('.mobileNavbar > li').attr('data-index'));
+  // }
+
+  // if (activeIndex === 0){
+  //   // console.log(activeIndex);
+  // } else if (activeIndex == 1){
+  //   // $('#tab1').addClass('.active');
+  // } else if (activeIndex == 2){
+    
+  // } else {
+    
+  // }
 });
 
 
